@@ -23,6 +23,10 @@ var_hola_mundo = var_hola + " " + var_mundo
 var_hola_mundo = f"Mi cadena {var_hola} {var_mundo}"
 # print(var_hola_mundo)
 # Interpolacion con multilineas f''' '''
-print(f"""Mi cadena:
-    {var_hola}
-        {var_mundo}""")
+
+# print(f"""Mi cadena:
+#     {var_hola}
+#         {var_mundo}""")
+
+# Metodos de cadenas en Python
+print(var_hola_mundo.upper(), " ", var_hola_mundo.lower())
