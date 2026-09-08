@@ -7,7 +7,7 @@ apellido = input("Cuáñ es tu apellido?: ")
 
 nombre.lower()
 
-correo = f"{nombre.lower()}{'.'}{apellido.lower()}{'@ciudadgotica.com'}"
+correo = f"{nombre.lower()}.{apellido.lower()}@ciudadgotica.com"
 
 print(f""" Tu nuevo email generado por el sistema es 
       {correo}
