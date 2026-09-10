@@ -18,7 +18,10 @@ while salir:
         print(f"Su saldo es de {saldo}")
     elif opcion == 2:
         modificacion = int(input("Ingrese saldo a retirar: "))
-        saldo -= modificacion
+        if saldo >= modificacion:
+            saldo -= modificacion
+        else:
+            print("No cuentas con el saldo suficiente")
     elif opcion == 3:
         modificacion = int(input("Ingrese saldo a depositar: "))
         saldo += modificacion
