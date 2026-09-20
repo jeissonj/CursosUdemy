@@ -1,5 +1,11 @@
 # Modulo de maquina de esnaks
 # la idea es coloacr aca todas las funciones así de una vez ensayar lo de los modulos
+def llenar_lista(key,lista):
+    for i in key:
+        lista[i] = 0
+    return lista
+
+
 def consulta(l, lista):
     pedir = input(
         "Si desea ordenar un producto ingrese el numero 1, si no ingrese el 2: "
@@ -7,7 +13,7 @@ def consulta(l, lista):
     if pedir == "1":
         lis = mostrar_productos(l, lista)
     elif pedir == "2":
-        if lista != []:
+        if lista != {}:
         print("La lista de los productos con sus precios es \n")
         # y acá coloco la lista 
                      
