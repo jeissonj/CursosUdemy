@@ -9,12 +9,13 @@ lt = [lista1, lista2, lista3]
 llaves = []
 llaves = m2.op_llaves(lt)
 valores = m2.op_valores(lt)
-pedido = dict.fromkeys(llaves, 0)
+pedido = [0] * len(lt)
 opcion = 0
 bucle = True
 while bucle:
     opcion = m2.mostrar_menu(lt, llaves)
     if opcion == "3":
+        print("*** Un gusto servirte, bye bye!!! ***")
         bucle = False
     elif opcion == "1":
         m2.actualizar_pedido(pedido, lt)

@@ -40,9 +40,9 @@ def mostrar_tiket(pedido, valores, lt, llaves):
     print("*** Tcket de venta ***")
     suma = 0
     suma_tem = 0
-    for i in llaves:
-        if i != pedido[i]:
+    for i in range(len(valores)):
+        if 0 != pedido[i]:
             suma_tem = pedido[i] * valores[i]
             suma += suma_tem
-            print(f" - {lt[i][llaves[1]]} - {suma_tem}\n")
+            print(f" - {lt[i][1][llaves[1]]} - {suma_tem}\n")
     print(f"Total -> {suma}")
