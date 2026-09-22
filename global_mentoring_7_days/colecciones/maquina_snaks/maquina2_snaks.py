@@ -1,4 +1,4 @@
-import modulo_2maquina as m2
+import modulo2_maquina as m2
 
 print("*** Maquina de Snks ***")
 
@@ -8,6 +8,7 @@ lista3 = [{"id": 2}, {"nombre": "Sandwich"}, {"precio": 120}]
 lt = [lista1, lista2, lista3]
 llaves = []
 llaves = m2.op_llaves(lt)
+valores = m2.op_valores(lt)
 pedido = dict.fromkeys(llaves, 0)
 opcion = 0
 bucle = True
@@ -15,7 +16,7 @@ while bucle:
     opcion = m2.mostrar_menu(lt, llaves)
     if opcion == "3":
         bucle = False
-    elif opcion = "1":
-        m2.actualizar_pedido(pedido)
-
-
+    elif opcion == "1":
+        m2.actualizar_pedido(pedido, lt)
+    elif opcion == "2":
+        m2.mostrar_tiket(pedido, valores, lt, llaves)

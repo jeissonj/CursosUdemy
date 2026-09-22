@@ -8,6 +8,13 @@ def op_llaves(l):
     return llaves
 
 
+def op_valores(lt):
+    valores = []
+    for j in lt:
+        valores.append(j[2]["precio"])
+    return valores
+
+
 def mostrar_menu(l, llaves):
     print("Snacks disponibles")
     for i in l:
@@ -23,6 +30,19 @@ def mostrar_menu(l, llaves):
     return x
 
 
-def actualizar_pedido(pedido):
-    x = input("¿Qué snack quires? (id):  ")
+def actualizar_pedido(pedido, l):
+    x = int(input("¿Qué snack quires? (id):  "))
     pedido[x] += 1
+    print(f"Ok, snaks agregado: {l[x]}")
+
+
+def mostrar_tiket(pedido, valores, lt, llaves):
+    print("*** Tcket de venta ***")
+    suma = 0
+    suma_tem = 0
+    for i in llaves:
+        if i != pedido[i]:
+            suma_tem = pedido[i] * valores[i]
+            suma += suma_tem
+            print(f" - {lt[i][llaves[1]]} - {suma_tem}\n")
+    print(f"Total -> {suma}")
